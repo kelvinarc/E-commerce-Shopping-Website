@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing – Mainstreet Mall</title>
+<style>
+:root{--bg:#fbfaf7;--surface:#fff;--ink:#1c2b2a;--muted:#5d6b69;--line:#e3e0d8;--brand:#0f6b5c;--brand-dark:#0a4d42;--sale:#d6401f;--sun:#f5c542}
+@media(prefers-color-scheme:dark){:root{--bg:#101716;--surface:#182220;--ink:#eef3f1;--muted:#a3b2af;--line:#2a3a37;--brand:#3fc2a8;--brand-dark:#6fd9c3}}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"Trebuchet MS","Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-family:Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--brand)}
+nav ul{display:flex;gap:6px;list-style:none}
+nav a{padding:8px 14px;border-radius:6px;font-weight:600;color:var(--muted)}
+nav a:hover,nav a.active{color:var(--brand);background:color-mix(in srgb,var(--brand) 10%,transparent)}
+.cart{background:var(--brand);color:#fff;padding:8px 16px;border-radius:6px;font-weight:700;border:0}
+@media(max-width:720px){.nav{flex-wrap:wrap;height:auto;padding:10px 0}nav{order:3;width:100%;overflow-x:auto}}
+.page-head{padding:56px 0 24px}
+.page-head h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin-bottom:12px}
+.page-head p{color:var(--muted);font-size:1.1rem;max-width:60ch}
+section{padding:36px 0}
+h2{font-family:Georgia,serif;font-size:1.8rem;margin-bottom:20px}
+.btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:700;border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-dark)}
+.btn-ghost{border:2px solid var(--brand);color:var(--brand);background:none}
+.btn-ghost:hover{background:color-mix(in srgb,var(--brand) 10%,transparent)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.muted{color:var(--muted)}
+footer{background:#12201e;color:#cfdad7;padding:40px 0 24px;margin-top:40px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer h4{color:#fff;margin-bottom:10px}footer ul{list-style:none}footer li{margin-bottom:6px}footer a:hover{color:var(--sun)}
+.copy{margin-top:28px;padding-top:16px;border-top:1px solid #2a3a37;font-size:.9rem}
+@media(max-width:640px){.foot{grid-template-columns:1fr}}
+
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;align-items:stretch}
+.plan{display:flex;flex-direction:column}
+.plan.featured{border:2px solid var(--brand);position:relative}
+.badge{position:absolute;top:-13px;left:24px;background:var(--brand);color:#fff;font-size:.8rem;font-weight:700;padding:2px 12px;border-radius:20px}
+.amount{font-family:Georgia,serif;font-size:2.4rem;color:var(--brand);margin:8px 0}
+.amount small{font-size:1rem;color:var(--muted);font-family:inherit}
+.plan ul{list-style:none;margin:16px 0 24px;flex:1}
+.plan li{padding:6px 0 6px 26px;position:relative}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:700}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{background:color-mix(in srgb,var(--brand) 8%,transparent)}
+.scroll{overflow-x:auto}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:8px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a href="index.html" class="logo">Mainstreet Mall</a>
+<nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="pricing.html" class="active">Pricing</a></li><li><a href="contact.html">Contact Us</a></li></ul></nav>
+<a href="index.html#products" class="cart">Shop</a>
+</div></header>
+<main>
+
+<div class="page-head"><div class="wrap">
+<h1>Simple, clear pricing</h1>
+<p>Shop for free, or join a membership for cheaper delivery and extra discounts. Cancel any time.</p>
+</div></div>
+
+<section><div class="wrap"><div class="plans">
+<div class="card plan">
+<h3>Basic</h3>
+<div class="amount">Free</div>
+<p class="muted">For occasional shoppers.</p>
+<ul><li>Browse and buy any product</li><li>Standard delivery fees apply</li><li>7-day returns</li><li>Email support</li></ul>
+<a href="index.html#products" class="btn btn-ghost" style="text-align:center">Start shopping</a>
+</div>
+<div class="card plan featured">
+<span class="badge">Most popular</span>
+<h3>Plus</h3>
+<div class="amount">₦5,000 <small>/ month</small></div>
+<p class="muted">For regular shoppers.</p>
+<ul><li>Free delivery on orders above ₦15,000</li><li>5% off every order</li><li>Early access to sales</li><li>Priority chat support</li></ul>
+<a href="contact.html" class="btn btn-primary" style="text-align:center">Join Plus</a>
+</div>
+<div class="card plan">
+<h3>Business</h3>
+<div class="amount">₦25,000 <small>/ month</small></div>
+<p class="muted">For shops and offices buying in bulk.</p>
+<ul><li>Free delivery on all orders</li><li>10% off bulk orders</li><li>VAT invoices</li><li>Dedicated account manager</li></ul>
+<a href="contact.html" class="btn btn-ghost" style="text-align:center">Talk to sales</a>
+</div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>Delivery fees</h2>
+<div class="card scroll"><table>
+<thead><tr><th>Location</th><th>Delivery time</th><th>Fee</th></tr></thead>
+<tbody>
+<tr><td>Within Port Harcourt</td><td>Same day – 1 day</td><td>₦1,500</td></tr>
+<tr><td>Other South-South cities</td><td>2 – 3 days</td><td>₦2,500</td></tr>
+<tr><td>Lagos &amp; Abuja</td><td>2 – 4 days</td><td>₦3,500</td></tr>
+<tr><td>Rest of Nigeria</td><td>3 – 6 days</td><td>₦4,500</td></tr>
+</tbody></table></div>
+<p class="muted" style="margin-top:10px">Prices shown are examples. Edit them to match your own rates.</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>Common questions</h2>
+<details><summary>Can I cancel my membership?</summary><p>Yes. Cancel at any time from your account and you will not be charged again.</p></details>
+<details><summary>Which payment methods do you accept?</summary><p>Debit and credit cards, bank transfer and pay on delivery in selected cities.</p></details>
+<details><summary>How do returns work?</summary><p>Return unused items within 7 days of delivery and we will refund you.</p></details>
+</div></section>
+
+</main>
+<footer><div class="wrap">
+<div class="foot">
+<div><h4>Mainstreet Mall</h4><p>Your online shopping center for quality products at fair prices.</p></div>
+<div><h4>Pages</h4><ul>
+<li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+<li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+<div><h4>Contact</h4><ul><li>Port Harcourt, Nigeria</li><li>support@mainstreetmall.com</li></ul></div>
+</div>
+<p class="copy">&copy; 2026 Mainstreet Mall. All rights reserved.</p>
+</div></footer>
+
+</body>
+</html>
