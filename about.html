@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us – Mainstreet Mall</title>
+<style>
+:root{--bg:#fbfaf7;--surface:#fff;--ink:#1c2b2a;--muted:#5d6b69;--line:#e3e0d8;--brand:#0f6b5c;--brand-dark:#0a4d42;--sale:#d6401f;--sun:#f5c542}
+@media(prefers-color-scheme:dark){:root{--bg:#101716;--surface:#182220;--ink:#eef3f1;--muted:#a3b2af;--line:#2a3a37;--brand:#3fc2a8;--brand-dark:#6fd9c3}}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"Trebuchet MS","Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-family:Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--brand)}
+nav ul{display:flex;gap:6px;list-style:none}
+nav a{padding:8px 14px;border-radius:6px;font-weight:600;color:var(--muted)}
+nav a:hover,nav a.active{color:var(--brand);background:color-mix(in srgb,var(--brand) 10%,transparent)}
+.cart{background:var(--brand);color:#fff;padding:8px 16px;border-radius:6px;font-weight:700;border:0}
+@media(max-width:720px){.nav{flex-wrap:wrap;height:auto;padding:10px 0}nav{order:3;width:100%;overflow-x:auto}}
+.page-head{padding:56px 0 24px}
+.page-head h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin-bottom:12px}
+.page-head p{color:var(--muted);font-size:1.1rem;max-width:60ch}
+section{padding:36px 0}
+h2{font-family:Georgia,serif;font-size:1.8rem;margin-bottom:20px}
+.btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:700;border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-dark)}
+.btn-ghost{border:2px solid var(--brand);color:var(--brand);background:none}
+.btn-ghost:hover{background:color-mix(in srgb,var(--brand) 10%,transparent)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.muted{color:var(--muted)}
+footer{background:#12201e;color:#cfdad7;padding:40px 0 24px;margin-top:40px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer h4{color:#fff;margin-bottom:10px}footer ul{list-style:none}footer li{margin-bottom:6px}footer a:hover{color:var(--sun)}
+.copy{margin-top:28px;padding-top:16px;border-top:1px solid #2a3a37;font-size:.9rem}
+@media(max-width:640px){.foot{grid-template-columns:1fr}}
+
+.story{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.story .art{background:var(--brand);color:#fff;border-radius:16px;min-height:240px;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;background-image:radial-gradient(circle at 85% 15%,var(--sun) 0 60px,transparent 61px)}
+.story .art strong{font-family:Georgia,serif;font-size:2.4rem;line-height:1}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;text-align:center}
+.stats strong{display:block;font-family:Georgia,serif;font-size:2rem;color:var(--brand)}
+.avatar{width:64px;height:64px;border-radius:50%;background:color-mix(in srgb,var(--brand) 15%,transparent);display:grid;place-items:center;font-size:1.8rem;margin-bottom:10px}
+@media(max-width:820px){.story{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a href="index.html" class="logo">Mainstreet Mall</a>
+<nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html" class="active">About Us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact Us</a></li></ul></nav>
+<a href="index.html#products" class="cart">Shop</a>
+</div></header>
+<main>
+
+<div class="page-head"><div class="wrap">
+<h1>About Mainstreet Mall</h1>
+<p>We started with a simple idea: shopping online should be easy, honest and affordable for everyone.</p>
+</div></div>
+
+<section><div class="wrap story">
+<div>
+<h2>Our story</h2>
+<p class="muted" style="margin-bottom:12px">Mainstreet Mall began as a small shop in Port Harcourt. Customers kept asking for delivery, so we built an online store that brings the whole shopping center to your phone or computer.</p>
+<p class="muted">Today we work with trusted suppliers and local sellers to offer fashion, electronics, home goods and groceries at fair prices, with delivery you can rely on.</p>
+</div>
+<div class="art"><strong>Since 2020</strong><span>Serving customers across Nigeria</span></div>
+</div></section>
+
+<section><div class="wrap"><div class="stats">
+<div class="card"><strong>50,000+</strong>Happy customers</div>
+<div class="card"><strong>10,000+</strong>Products</div>
+<div class="card"><strong>200+</strong>Trusted sellers</div>
+<div class="card"><strong>36</strong>States delivered to</div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>What we stand for</h2>
+<div class="grid">
+<div class="card"><h3>Quality first</h3><p class="muted">Every product is checked before it ships, so you get what you ordered.</p></div>
+<div class="card"><h3>Fair prices</h3><p class="muted">We work directly with sellers to cut costs and pass the savings to you.</p></div>
+<div class="card"><h3>Reliable delivery</h3><p class="muted">Track every order from checkout to your door.</p></div>
+<div class="card"><h3>Real support</h3><p class="muted">Real people answer your questions within 24 hours.</p></div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>Meet the team</h2>
+<div class="grid">
+<div class="card"><div class="avatar">👨🏾‍💼</div><h3>Chinedu Okafor</h3><p class="muted">Founder &amp; CEO</p></div>
+<div class="card"><div class="avatar">👩🏾‍💻</div><h3>Amaka Eze</h3><p class="muted">Head of Operations</p></div>
+<div class="card"><div class="avatar">👨🏾‍🔧</div><h3>Tonye Briggs</h3><p class="muted">Logistics Manager</p></div>
+<div class="card"><div class="avatar">👩🏾‍🎤</div><h3>Ngozi Obi</h3><p class="muted">Customer Care Lead</p></div>
+</div></div></section>
+
+<section style="text-align:center"><div class="wrap">
+<h2>Ready to start shopping?</h2>
+<a href="index.html#products" class="btn btn-primary">Browse products</a>
+<a href="contact.html" class="btn btn-ghost" style="margin-left:10px">Contact us</a>
+</div></section>
+
+</main>
+<footer><div class="wrap">
+<div class="foot">
+<div><h4>Mainstreet Mall</h4><p>Your online shopping center for quality products at fair prices.</p></div>
+<div><h4>Pages</h4><ul>
+<li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+<li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+<div><h4>Contact</h4><ul><li>Port Harcourt, Nigeria</li><li>support@mainstreetmall.com</li></ul></div>
+</div>
+<p class="copy">&copy; 2026 Mainstreet Mall. All rights reserved.</p>
+</div></footer>
+
+</body>
+</html>
