@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign In – Mainstreet Mall</title>
+<style>
+:root{--bg:#fbfaf7;--surface:#fff;--ink:#1c2b2a;--muted:#5d6b69;--line:#e3e0d8;--brand:#0f6b5c;--brand-dark:#0a4d42;--sale:#d6401f;--sun:#f5c542}
+@media(prefers-color-scheme:dark){:root{--bg:#101716;--surface:#182220;--ink:#eef3f1;--muted:#a3b2af;--line:#2a3a37;--brand:#3fc2a8;--brand-dark:#6fd9c3}}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"Trebuchet MS","Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-family:Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--brand)}
+nav ul{display:flex;gap:6px;list-style:none}
+nav a{padding:8px 14px;border-radius:6px;font-weight:600;color:var(--muted)}
+nav a:hover,nav a.active{color:var(--brand);background:color-mix(in srgb,var(--brand) 10%,transparent)}
+.cart{background:var(--brand);color:#fff;padding:8px 16px;border-radius:6px;font-weight:700;border:0}
+@media(max-width:720px){.nav{flex-wrap:wrap;height:auto;padding:10px 0}nav{order:3;width:100%;overflow-x:auto}}
+.page-head{padding:56px 0 24px}
+.page-head h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin-bottom:12px}
+.page-head p{color:var(--muted);font-size:1.1rem;max-width:60ch}
+section{padding:36px 0}
+h2{font-family:Georgia,serif;font-size:1.8rem;margin-bottom:20px}
+.btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:700;border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-dark)}
+.btn-ghost{border:2px solid var(--brand);color:var(--brand);background:none}
+.btn-ghost:hover{background:color-mix(in srgb,var(--brand) 10%,transparent)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.muted{color:var(--muted)}
+footer{background:#12201e;color:#cfdad7;padding:40px 0 24px;margin-top:40px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer h4{color:#fff;margin-bottom:10px}footer ul{list-style:none}footer li{margin-bottom:6px}footer a:hover{color:var(--sun)}
+.copy{margin-top:28px;padding-top:16px;border-top:1px solid #2a3a37;font-size:.9rem}
+@media(max-width:640px){.foot{grid-template-columns:1fr}}
+
+.auth{max-width:440px;margin:0 auto}
+.tabs{display:grid;grid-template-columns:1fr 1fr;border-bottom:2px solid var(--line);margin-bottom:8px}
+.tabs button{padding:12px;border:0;background:none;color:var(--muted);font:inherit;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tabs button[aria-selected="true"]{color:var(--brand);border-color:var(--brand)}
+label{display:block;font-weight:700;margin:14px 0 6px}
+input[type=text],input[type=email],input[type=password]{width:100%;padding:12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:.95rem}
+.row a{color:var(--brand);font-weight:600}
+.msg{margin-top:16px;padding:12px 14px;border-radius:6px;font-weight:700}
+.msg.ok{background:color-mix(in srgb,var(--brand) 12%,transparent);color:var(--brand)}
+.msg.err{background:color-mix(in srgb,var(--sale) 12%,transparent);color:var(--sale)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a href="index.html" class="logo">Mainstreet Mall</a>
+<nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact Us</a></li></ul></nav>
+<a href="index.html#products" class="cart">Shop</a>
+</div></header>
+<main>
+
+<div class="page-head"><div class="wrap" style="text-align:center">
+<h1>Welcome back</h1>
+<p style="margin:0 auto">Sign in to track orders and check out faster, or create a free account.</p>
+</div></div>
+
+<section><div class="wrap"><div class="card auth">
+<div class="tabs" role="tablist">
+<button role="tab" id="tabIn" aria-selected="true" aria-controls="formIn">Sign in</button>
+<button role="tab" id="tabUp" aria-selected="false" aria-controls="formUp">Create account</button>
+</div>
+
+<form id="formIn" novalidate>
+<label for="inEmail">Email address</label>
+<input id="inEmail" type="email" autocomplete="email" required>
+<label for="inPass">Password</label>
+<input id="inPass" type="password" autocomplete="current-password" required>
+<div class="row"><label style="margin:0;font-weight:400"><input type="checkbox"> Remember me</label><a href="contact.html">Forgot password?</a></div>
+<button type="submit" class="btn btn-primary" style="width:100%;margin-top:18px">Sign in</button>
+</form>
+
+<form id="formUp" novalidate hidden>
+<label for="upName">Full name</label>
+<input id="upName" type="text" autocomplete="name" required>
+<label for="upEmail">Email address</label>
+<input id="upEmail" type="email" autocomplete="email" required>
+<label for="upPass">Password (at least 8 characters)</label>
+<input id="upPass" type="password" autocomplete="new-password" required>
+<label for="upPass2">Confirm password</label>
+<input id="upPass2" type="password" autocomplete="new-password" required>
+<button type="submit" class="btn btn-primary" style="width:100%;margin-top:18px">Create account</button>
+</form>
+
+<p id="msg" class="msg" role="status" hidden></p>
+</div></div></section>
+
+</main>
+<footer><div class="wrap">
+<div class="foot">
+<div><h4>Mainstreet Mall</h4><p>Your online shopping center for quality products at fair prices.</p></div>
+<div><h4>Pages</h4><ul>
+<li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+<li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+<div><h4>Contact</h4><ul><li>Port Harcourt, Nigeria</li><li>support@mainstreetmall.com</li></ul></div>
+</div>
+<p class="copy">&copy; 2026 Mainstreet Mall. All rights reserved.</p>
+</div></footer>
+<script>
+var tabIn = document.getElementById('tabIn'), tabUp = document.getElementById('tabUp');
+var formIn = document.getElementById('formIn'), formUp = document.getElementById('formUp');
+var msg = document.getElementById('msg');
+function show(inMode){
+  tabIn.setAttribute('aria-selected', inMode); tabUp.setAttribute('aria-selected', !inMode);
+  formIn.hidden = !inMode; formUp.hidden = inMode; msg.hidden = true;
+}
+tabIn.onclick = function(){ show(true); };
+tabUp.onclick = function(){ show(false); };
+function say(text, ok){ msg.hidden = false; msg.className = 'msg ' + (ok ? 'ok' : 'err'); msg.textContent = text; }
+function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+formIn.addEventListener('submit', function(e){
+  e.preventDefault();
+  if (!validEmail(inEmail.value.trim()) || !inPass.value){ return say('Enter a valid email and your password.', false); }
+  // TODO: send these details to your server to sign the user in.
+  say('Signed in (demo only, no server connected yet).', true);
+});
+formUp.addEventListener('submit', function(e){
+  e.preventDefault();
+  if (!upName.value.trim()) return say('Please enter your full name.', false);
+  if (!validEmail(upEmail.value.trim())) return say('Please enter a valid email address.', false);
+  if (upPass.value.length < 8) return say('Password must be at least 8 characters.', false);
+  if (upPass.value !== upPass2.value) return say('Passwords do not match.', false);
+  // TODO: send these details to your server to create the account.
+  say('Account created (demo only, no server connected yet).', true);
+  formUp.reset();
+});
+</script>
+</body>
+</html>
